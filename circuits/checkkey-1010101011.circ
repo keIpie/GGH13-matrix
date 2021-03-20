@@ -1,0 +1,19 @@
+: nins 10
+: depth 4
+# TEST 1010101011 1
+# TEST 0000110110 0
+# TEST 1011101100 0
+# TEST 0001101001 0
+10 gate NOT 1
+11 gate NOT 3
+12 gate NOT 5
+13 gate NOT 7
+14 gate AND 0 10
+15 gate AND 2 11
+16 gate AND 4 12
+17 gate AND 6 13
+18 gate AND 8 9
+19 gate AND 14 15
+20 gate AND 16 17
+21 gate AND 19 20
+22 output AND 21 18

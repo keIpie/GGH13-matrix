@@ -1,0 +1,7 @@
+: nins 2
+: depth 1
+# TEST 00 0
+# TEST 01 1
+# TEST 10 1
+# TEST 11 0
+2 output XOR 1 0

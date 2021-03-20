@@ -1,0 +1,9 @@
+: nins 4
+: depth 2
+# TEST 0000 0
+# TEST 1011 0
+# TEST 1110 0
+# TEST 1111 1
+4 gate AND 0 1
+5 gate AND 4 2
+6 output AND 5 3

@@ -1,0 +1,7 @@
+: nins 3
+: depth 2
+0 input
+1 input
+2 input
+3 gate AND 0 1
+4 output XOR 3

@@ -4,9 +4,11 @@ Repository contains implementation of cryptographic program obfuscation using GG
 
 -----------------------------------------------------------------------------------------
 
+NOT WORKING YET....
+
 To test execution of encrypted basic group programs with decryption run command:
 
-`./main.py --test -p 5 -q 7`
+`./main.py --test -p 761 -q 4591`
 
 To test execution of group program in S5 for specified circuit run command:
 

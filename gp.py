@@ -153,7 +153,7 @@ class EncryptedGroupProgram:
         print "PRODUCT: ", self.nonid
         print "PUBLIC PARAMETER: ", self.public
         print "DUMMY_ZEROS: ", self.dummy_zeros
-        print "DUMMY_ZEROS: ", self.dummy_ones
+        print "DUMMY_ONES: ", self.dummy_ones
         print "-------------------------------------------"
     def evaluate(self,indicies,verbose=False):
         assert len(self.zeros) == len(indicies), "List is empty GP1."
@@ -181,6 +181,12 @@ class EncryptedGroupProgram:
         return result
     def get_pzt(self):
         return self.public
+    def get_mat_zeros(self,i):
+        assert i<len(self.zeros) and i>=0, "wrong index"
+        return self.zeros[i]
+    def get_mat_ones(self,i):
+        assert i<len(self.ones) and i>=0, "wrong index"
+        return self.ones[i]
 
 def random_element_GP(group,n=5):
     assert (group == Permutations(5) or group == SymmetricGroup(5) or group == BraidGroup(n)), "Group is not known"

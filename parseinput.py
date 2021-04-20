@@ -8,7 +8,6 @@ from copy import deepcopy
 import functools, sys
 from sage.all import *
 from gp import *
-from obf import *
 
 def clr_error(s):
     return '\x1b[31m%s\x1b[0m' % s
@@ -61,7 +60,7 @@ def testObf(path, testcases, args):
     for t in testcases:
         tints = [int(i) for i in list(t)]
         print("testcase: ", t)
-        print(checkID(decrypt(egp.evaluate(tints,args.verbose))),egp.evaluate_dummy(tints,args.verbose))),egp.get_pzt(),args.p,args.q)
+        print(checkID(decrypt(egp.evaluate(tints,args.verbose),egp.evaluate_dummy(tints,args.verbose),egp.get_pzt(),args.p,args.q)))
     return True
 
 def testGP(path, testcases, args):
